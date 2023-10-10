@@ -1,0 +1,23 @@
+.header {
+    width: 100%;
+    &__logo {
+        background-image: url('../images/logo.svg');
+        width: 266px;
+        height: 52px;
+    }
+    &__nav {
+        display: flex;
+        gap: 27px;
+    }
+    &__container {
+        height: 73px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__link {
+        text-decoration: none;
+        @include font($font-s, $font-regular, $color-black, uppercase);
+    }
+}

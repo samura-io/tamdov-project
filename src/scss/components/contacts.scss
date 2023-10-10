@@ -1,0 +1,35 @@
+.contacts {
+    background: $gradient-blue;
+    padding: 40px 0;
+    &__container {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__address {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__info {
+        @include font($font-m, $font-regular, $color-white);
+        &_bold {
+            font-weight: $font-bold;
+        }
+    }
+    &__link {
+        @include link($color-white);
+        display: flex;
+    }
+    &__timetable {
+        display: flex;
+        flex-direction: column;
+        gap: 30px; 
+    }
+    &__img {
+        margin-right: 10px;
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+    }
+}

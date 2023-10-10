@@ -1,0 +1,58 @@
+.services {
+    &__container {
+        padding: 60px 0;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 300px);
+    }
+    &__list {
+        list-style-type: disc;
+        margin-bottom: 23px;
+    }
+    &__card {
+        padding: 43px 28px;
+        position: relative;
+        &:nth-child(1) {
+            grid-column: 1/5;
+            grid-row: 1/2;
+            box-shadow: 10px 12px 53px 0px rgba(0, 0, 0, 0.12);
+            color: $color-blue;
+        }
+        &:nth-child(2) {
+            grid-column: 5/7;
+            grid-row: 1/2;
+            background: $gradient-blue;
+            color: $color-white;
+        }
+        &:nth-child(3) {
+            grid-column: 1/4;
+            grid-row: 2/3;
+            background: $gradient-blue;
+            color: $color-white;
+        }
+        &:nth-child(4) {
+            grid-column: 4/7;
+            grid-row: 2/3;
+            box-shadow: 10px 12px 53px 0px rgba(0, 0, 0, 0.12);
+            color: $color-blue;
+        }
+    }
+    &__card-title {
+        @include font($font-m, $font-medium, inherit);
+        margin-bottom: 24px;
+    }
+    &__element {
+        @include font($font-xs, $font-regular, inherit);
+        max-width: 70%;
+        margin-bottom: 3px;
+    }
+    &__link {
+        @include link(inherit);
+    }
+    &__img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}

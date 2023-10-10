@@ -1,0 +1,8 @@
+.cards {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 413px);
+        grid-auto-rows: 255px;
+        padding: 60px 0;
+    }
+}

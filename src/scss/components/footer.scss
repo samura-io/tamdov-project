@@ -1,0 +1,25 @@
+.footer {
+    &__container {
+        margin: 60px 0 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+    }
+    &__links {
+        display: flex;
+        gap: 33px 100px;
+        max-width: 400px;
+        flex-wrap: wrap;
+    }
+    &__link {
+        @include link($color-black);
+        width: 150px;
+        &_up {
+            flex-grow: 1;
+        }
+    }
+    &__text {
+        @include font($font-s, $font-regular, $color-black);
+        margin-bottom: 13px;
+    }
+}

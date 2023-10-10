@@ -1,0 +1,53 @@
+.about {
+    &__container {
+        padding: 55px 0 80px;
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+    }
+    &__case {
+        background: $gradient-blue;
+        padding: 55px 72px;
+        max-width: 492px;
+        gap: 32px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    &__case-number {
+        @include font($font-xxl, $font-black, $color-white, uppercase);
+    }
+    &__case-description {
+        @include font($font-s, $font-bold, $color-white);
+    }
+    &__description {
+        max-width: 688px;
+        min-width: 568px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    &__title-container {
+        display: flex;
+        gap: 18px;
+        width: 100%;
+    }
+    &__title {
+        @include font($font-l, $font-bold, $color-black);
+        white-space: nowrap;
+    }
+    &__divider {
+        border-bottom: 8px solid $color-blue;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    &__text {
+        @include font($font-m, $font-regular, $color-black);
+        padding: 34px 0 0;
+    }
+    &__link {
+        align-self: flex-end;
+        margin-top: auto;
+        @include link;
+    }
+}

@@ -1,0 +1,43 @@
+@mixin font($size, $weight, $color:black, $case:none) {
+    font-size: $size; 
+    font-weight: $weight;
+    color: $color;
+    text-transform: $case;
+}
+
+@mixin button($width, $padding) {
+    @include font($font-s, $font-regular);
+    background-color: $color-gray;
+    color: $color-black;
+    padding-top: $padding;
+    padding-bottom: $padding;
+    width: $width;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.4s linear;
+  
+    &:hover {
+      background-color: darken($color-gray, 10%);
+    }
+  
+    &:active {
+      background-color: darken($color-gray, 20%);
+    }
+  
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+}
+
+@mixin link($color:$color-blue) {
+  @include font($font-s, $font-bold, $color);
+  text-decoration: none;
+  transition: opacity .4s linear;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+}
