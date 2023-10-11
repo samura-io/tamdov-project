@@ -4,10 +4,13 @@
         background-image: url('../images/logo.svg');
         width: 266px;
         height: 52px;
+        background-position: center;
+        background-size: contain;
     }
     &__nav {
         display: flex;
         gap: 27px;
+        align-items: center;
     }
     &__container {
         height: 73px;
@@ -19,5 +22,102 @@
     &__link {
         text-decoration: none;
         @include font($font-s, $font-regular, $color-black, uppercase);
+    }
+    &__button {
+        display: none;
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/icons/hamburger-blue.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+}
+
+@include desktop {
+    .header {
+        &__link {
+            @include font($font-xs, $font-regular, $color-black, uppercase);
+            &_type {
+                &_tel {
+                    display: block;
+                    height: 30px;
+                    min-width: 30px;
+                    background-image: url(../images/icons/tel.svg);
+                    background-size: contain;
+                    font-size: 0;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .header {
+        &__button {
+            display: block;
+            &_open {
+                position: fixed;
+                top: 23px;
+                right: 20px;
+                z-index: 999;
+                background-image: url(../images/icons/hamburger-white.svg);
+            }
+        }
+        &__nav {
+            position: fixed;
+            width: 70vw;
+            height: 100vh;
+            background-color: $color-blue;
+            flex-direction: column;
+            right: -70%;
+            top: 0;
+            justify-content: center;
+            transition: right .4s linear;
+            z-index: 998;
+            &_open {
+                right: 0;
+            }
+        }
+        &__shadow {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            opacity: 0;
+            right: -100%;
+            background-color: #00000050;
+            z-index: 997;
+            transition: opacity .4s linear;
+            &_active {
+                right: 0;
+                opacity: 1;
+            }
+        }
+        &__link {
+            @include font($font-s, $font-regular, $color-white, uppercase);
+            transition: border-color .4s linear;
+            box-sizing: border-box;
+            border-bottom: 2px solid transparent;
+            height: 27px;
+            &:hover {
+                border-bottom: 2px solid $color-white;
+            }
+            &_type {
+                &_tel {
+                    background-image: none;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .header {
+        &__logo {
+            width: 205px;
+            height: 40px;
+        }
     }
 }

@@ -33,3 +33,54 @@
         object-fit: contain;
     }
 }
+
+@include desktop {
+    .contacts {
+        padding: 20px 0;
+        &__info {
+            @include font($font-s, $font-regular, $color-white);
+            &_bold {
+                font-weight: $font-bold;
+            }
+        }
+        &__link {
+            @include font($font-s, $font-regular, $color-white);
+        }
+        &__container {
+            margin-top: 20px;
+        }
+    }
+}
+
+@include tablet {
+    .contacts {
+        &__container {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__address {
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        &__timetable {
+            gap: 10px; 
+            align-items: center;
+        }
+    }
+}
+
+@include mobile {
+    .contacts {
+        padding: 20px 0;
+        &__info {
+            @include font($font-xs, $font-light, $color-white);
+            &_bold {
+                font-weight: $font-regular;
+            }
+        }
+        &__link {
+            @include font($font-xs, $font-light, $color-white);
+        }
+    }
+}

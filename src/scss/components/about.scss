@@ -3,7 +3,7 @@
         padding: 55px 0 80px;
         display: flex;
         justify-content: space-between;
-        gap: 60px;
+        gap: 20px;
     }
     &__case {
         background: $gradient-blue;
@@ -22,7 +22,7 @@
     }
     &__description {
         max-width: 688px;
-        min-width: 568px;
+        min-width: 500px;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
@@ -48,6 +48,84 @@
     &__link {
         align-self: flex-end;
         margin-top: auto;
+        padding-top: 5px;
         @include link;
+    }
+}
+
+@include desktop {
+    .about {
+        &__container {
+            flex-wrap: wrap;
+        }
+        &__case {
+            order: 1;
+            width: 100%;
+            max-width: 100%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: none;
+            padding: 30px 60px;
+        }
+        &__case-number {
+            text-align: center;
+        }
+        &__case-description {
+            order: 0;
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+        &__description {
+            max-width: 100%;
+        }
+        &__link {
+            padding-top: 15px;
+        }
+    }
+}
+
+@include tablet {
+    .about {
+        &__container {
+            padding: 30px 0;
+        }
+        &__case {
+            padding: 20px 20px;
+        }
+        &__case-number {
+            @include font($font-l, $font-bold, $color-white, uppercase);
+        }
+        &__case-description {
+            @include font($font-xs, $font-regular, $color-white);
+        }
+        &__text {
+            @include font($font-s, $font-regular, $color-black);
+        }
+        &__description {
+            min-width: 250px;
+        }
+    }
+}
+
+@include mobile {
+    .about {
+        &__container {
+            flex-wrap: wrap;
+        }
+        &__case {
+            width: 100%;
+            max-width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            padding: 30px 30px;
+        }
+        &__case-number {
+            text-align: left;
+        }
+        &__case-description {
+            display: block;
+            text-align: left;
+            width: 100%;
+        }
     }
 }

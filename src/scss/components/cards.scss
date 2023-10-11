@@ -1,8 +1,19 @@
 .cards {
     &__container {
+        margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, 413px);
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         grid-auto-rows: 255px;
         padding: 60px 0;
+    }
+}
+
+@include tablet {
+    .cards {
+        &__container {
+            gap: 10px;
+            padding: 30px 0;
+        }
     }
 }

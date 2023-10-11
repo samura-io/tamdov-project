@@ -18,3 +18,12 @@
     height: 70px;
   }
 }
+
+@include mobile {
+  .change-swiper {
+    &-img {
+      width: 150px;
+      height: 60px;
+    }
+  }
+}

@@ -26,3 +26,11 @@
         margin-top: 39px;
     }
 }
+
+@include tablet {
+    .promo {
+        &__shadow {
+            background: $gradient-black-transparent-media;
+        }
+    }
+}

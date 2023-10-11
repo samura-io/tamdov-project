@@ -7,6 +7,7 @@ $color-blue-dark: #253445;
 $gradient-blue: linear-gradient(180deg, #00428F 0%, #002D63 100%);
 
 $gradient-black-transparent: linear-gradient(90deg, rgba(0, 0, 0, 0.60) 42.87%, rgba(0, 0, 0, 0.00) 72.8%);
+$gradient-black-transparent-media: linear-gradient(90deg, rgba(0, 0, 0, 0.60) 72%, rgba(0, 0, 0, 0.20) 99%);
 
 $content-width: 1280px;
 
@@ -23,3 +24,6 @@ $font-medium: 500;
 $font-bold: 600;
 $font-black: 800;
 
+$mobile: 576px;
+$tablet: 768px;
+$desktop: 990px;

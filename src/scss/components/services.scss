@@ -20,6 +20,7 @@
             color: $color-blue;
         }
         &:nth-child(2) {
+            order: -1;
             grid-column: 5/7;
             grid-row: 1/2;
             background: $gradient-blue;
@@ -54,5 +55,33 @@
         position: absolute;
         right: 0;
         bottom: 0;
+    }
+}
+
+@include desktop {
+    .services {
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@include tablet {
+    .services {
+        &__container {
+            padding: 30px 0;
+        }
+        &__img {
+            width: 150px;
+        }
+    }
+}
+
+@include mobile {
+    .services {
+        &__img {
+            width: 100px;
+        }
     }
 }
