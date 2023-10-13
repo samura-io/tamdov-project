@@ -1,3 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-hidden {
+    overflow: hidden;
+}
+
 .root {
     font-family: Inter, Arial, sans-serif;
     font-style: normal;
@@ -18,7 +26,7 @@
     gap: 18px;
     justify-content: center;
     &__divider {
-        border-bottom: 8px solid $color-blue;
+        border-bottom: 5px solid $color-blue;
         margin-bottom: 8px;
         flex-grow: 1;
         width: 100%;
@@ -50,10 +58,32 @@
             }
         }
         &__divider {
-            border-bottom: 6px solid $color-blue;
+            border-bottom: 3px solid $color-blue;
             margin-bottom: 6px;
         }
     }
     
 }
+
+//scrollbar styles
+// Firefox
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $color-blue transparent;
+  }
+  
+// Chrome, Edge и Safari
+  *::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: $color-blue;
+    border-radius: 20px;
+    border: 1px solid transparent;
+  }
     

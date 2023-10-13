@@ -41,3 +41,9 @@ export const changeSwiper = new Swiper('.change-swiper', {
       prevEl: '.swiper-button-prev',
     }
 });
+
+export const popupSwiper = new Swiper('.popup-swiper', {
+  slidesPerView: 2.6,
+  spaceBetween: 10,
+  freeMode: true,
+});

@@ -2,10 +2,13 @@
   "name": "tstp",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://samura-io.github.io/tamdov-project/",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +30,7 @@
   },
   "dependencies": {
     "core-js": "^3.32.2",
+    "gh-pages": "^6.0.0",
     "swiper": "^10.3.1"
   }
 }
