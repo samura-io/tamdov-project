@@ -14,3 +14,9 @@
         @content;
     }
 }
+
+@mixin tablet-heigth {
+    @media (max-height: $table-horizontal) {
+        @content;
+    }
+}

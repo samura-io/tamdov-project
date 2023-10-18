@@ -84,3 +84,20 @@
         }
     }
 }
+
+@include tablet-heigth {
+    .popup {
+        &__title {
+            padding-bottom: 10px;
+        }
+        &__container {
+            padding: 20px 0 20px 20px;
+        }
+        &__close {
+            width: 15px;
+            height: 15px;
+            right: 15px;
+            top: 12px;
+        }
+    }
+}

@@ -1,7 +1,6 @@
 .card {
     width: 100%;
     position: relative;
-    background: url(../images/slide.jpg);
     background-size: cover;
     height: 100%;
     &__wrapper {
@@ -16,9 +15,10 @@
         transition: opacity .4s linear;
     }
     &__title {
-        @include font($font-l, $font-bold, $color-white);
+        @include font($font-ml, $font-bold, $color-white);
         margin-bottom: 33px;
-        white-space: nowrap;
+        width: 318px;
+        text-align: center;
     }
     &__btn {
         @include button(123px, 7px);

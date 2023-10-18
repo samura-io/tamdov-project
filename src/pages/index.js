@@ -1,22 +1,51 @@
 import '../styles/style.css';
-import { paginationSwiper, changeSwiper, popupSwiper } from '../components/Swipers';
-paginationSwiper;
-changeSwiper;
-popupSwiper;
+import Swipers from '../components/Swipers';
+import Hamburger from '../components/Hamburger';
+import Popup from '../components/Popup';
+import ImageTemplate from '../components/ImageTemplate';
+import CardTemplate from '../components/CardTemplate';
+import Section from '../components/Section';
+import contentLink from '../content.json';
 
-const hamburgerButton = document.querySelector('.header__button');
-const body = document.querySelector('body');
-const navSelector = document.querySelector('.header__nav');
-const shadow = document.querySelector('.header__shadow');
-const links = document.querySelectorAll('.header__link');
+fetch(contentLink)
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        promoSection.renderItems(data.promoImages.urls);
+        cardSection.renderItems(data.cards);
+        swipers.runPaginationSwiper();
+    });
 
-const toggleHamburger = () => {
-    body.classList.toggle('scroll-hidden')
-    navSelector.classList.toggle('header__nav_open');
-    shadow.classList.toggle('header__shadow_active');
-    hamburgerButton.classList.toggle('header__button_open');
+const swipers = new Swipers();
+
+function addImageElement(item){
+        const imageTemplate = new ImageTemplate('#promo__template', '.pagination-swiper-slide', item);
+        const templateElement = imageTemplate.generateElements();
+        return templateElement;
 }
 
-hamburgerButton.addEventListener('click', toggleHamburger);
-shadow.addEventListener('click', toggleHamburger);
-links.forEach((i)=>{i.addEventListener('click', toggleHamburger)})
+function addCardElement(item){
+        const cardTemplate = new CardTemplate({handleCardClick: ()=>{
+            swipers.runPopupSwiper();
+            cardPopup.open(item);
+        }}, '#card__template', '.card', item, '.card__btn');
+        const templateElement = cardTemplate.generateElements();
+        return templateElement;
+}
+
+const promoSection = new Section({renderer: (item)=>{
+    const element = addImageElement(item);
+    promoSection.addItem(element);
+}}, '.pagination-swiper-wrapper');
+
+const cardSection = new Section({renderer: (item)=>{
+    const element = addCardElement(item);
+    cardSection.addItem(element);
+}}, '.cards__container');
+
+const cardPopup = new Popup('.popup', '#popup__template', '.popup-swiper-slide');
+cardPopup.setEventListeners();
+
+const hamburger = new Hamburger('.header');
+hamburger.setEventListeners();
