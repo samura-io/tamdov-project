@@ -7,7 +7,6 @@
         grid-template-rows: repeat(2, 300px);
     }
     &__list {
-        list-style-type: disc;
         margin-bottom: 23px;
     }
     &__card {
@@ -41,12 +40,15 @@
     }
     &__card-title {
         @include font($font-m, $font-medium, inherit);
-        margin-bottom: 24px;
+        margin: 0 0 24px 13px;
     }
     &__element {
-        @include font($font-xs, $font-regular, inherit);
+        @include font($font-s, $font-regular, inherit);
         max-width: 70%;
         margin-bottom: 3px;
+        &::before {
+            content: '• '
+        }
     }
     &__link {
         @include link(inherit);

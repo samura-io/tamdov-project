@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -109,14 +110,23 @@ html {
   justify-content: center;
 }
 .title__divider {
-  border-bottom: 5px solid #00428F;
+  border-bottom: 2px solid #00428F;
   margin-bottom: 8px;
   flex-grow: 1;
   width: 100%;
 }
+.title__divider_mini {
+  flex-basis: 20%;
+  border-bottom: 2px solid #00428F;
+  margin-bottom: 8px;
+  width: 100%;
+}
+.title__divider_color_white {
+  border-color: #FFFFFF;
+}
 .title__name {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 300;
   color: #222222;
   text-transform: none;
   white-space: nowrap;
@@ -124,10 +134,6 @@ html {
 }
 .title__name_color_white {
   color: #FFFFFF;
-}
-.title__empty {
-  flex-grow: 1;
-  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -191,7 +197,7 @@ html {
   font-size: 16px;
   font-weight: 400;
   color: #222222;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 .header__button {
   display: none;
@@ -392,9 +398,10 @@ html {
 }
 .about__case-description {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 300;
   color: #FFFFFF;
   text-transform: none;
+  white-space: nowrap;
 }
 .about__description {
   max-width: 688px;
@@ -432,10 +439,11 @@ html {
   margin-top: auto;
   padding-top: 5px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 300;
   color: #00428F;
   text-transform: none;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   transition: opacity 0.4s linear;
   cursor: pointer;
 }
@@ -486,7 +494,7 @@ html {
   }
   .about__case-description {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     color: #FFFFFF;
     text-transform: none;
   }
@@ -540,52 +548,23 @@ html {
   position: relative;
   background-size: cover;
   height: 100%;
+  cursor: pointer;
 }
 .card__wrapper {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 56px;
+  left: 37px;
   opacity: 0;
-  display: flex;
-  align-items: center;
   flex-direction: column;
   transition: opacity 0.4s linear;
 }
 .card__title {
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 300;
   color: #FFFFFF;
   text-transform: none;
-  margin-bottom: 33px;
   width: 318px;
-  text-align: center;
-}
-.card__btn {
-  font-size: 16px;
-  font-weight: 400;
-  color: black;
-  text-transform: none;
-  background-color: #D9D9D9;
-  color: #222222;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  width: 123px;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.4s linear;
-}
-.card__btn:hover {
-  background-color: silver;
-}
-.card__btn:active {
-  background-color: #a6a6a6;
-}
-.card__btn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+  text-align: left;
 }
 .card::before {
   content: " ";
@@ -611,7 +590,6 @@ html {
   grid-template-rows: repeat(2, 300px);
 }
 .services__list {
-  list-style-type: disc;
   margin-bottom: 23px;
 }
 .services__card {
@@ -648,22 +626,26 @@ html {
   font-weight: 500;
   color: inherit;
   text-transform: none;
-  margin-bottom: 24px;
+  margin: 0 0 24px 13px;
 }
 .services__element {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: inherit;
   text-transform: none;
   max-width: 70%;
   margin-bottom: 3px;
 }
+.services__element::before {
+  content: "• ";
+}
 .services__link {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 300;
   color: inherit;
   text-transform: none;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   transition: opacity 0.4s linear;
   cursor: pointer;
 }
@@ -747,18 +729,17 @@ html {
   color: #FFFFFF;
   text-transform: none;
 }
-.contacts__info_bold {
-  font-weight: 600;
-}
 .contacts__link {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 300;
   color: #FFFFFF;
   text-transform: none;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   transition: opacity 0.4s linear;
   cursor: pointer;
   display: flex;
+  text-decoration: none;
 }
 .contacts__link:hover {
   opacity: 0.7;
@@ -841,19 +822,21 @@ html {
 }
 .footer__links {
   display: flex;
-  gap: 33px 100px;
+  gap: 13px 100px;
   max-width: 400px;
   flex-wrap: wrap;
 }
 .footer__link {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 300;
   color: #222222;
   text-transform: none;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   transition: opacity 0.4s linear;
   cursor: pointer;
   width: 150px;
+  text-decoration: none;
 }
 .footer__link:hover {
   opacity: 0.7;

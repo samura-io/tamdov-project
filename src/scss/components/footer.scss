@@ -7,13 +7,14 @@
     }
     &__links {
         display: flex;
-        gap: 33px 100px;
+        gap: 13px 100px;
         max-width: 400px;
         flex-wrap: wrap;
     }
     &__link {
         @include link($color-black);
         width: 150px;
+        text-decoration: none;
         &_up {
             flex-grow: 1;
         }

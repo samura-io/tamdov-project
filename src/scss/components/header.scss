@@ -21,7 +21,7 @@
     }
     &__link {
         text-decoration: none;
-        @include font($font-s, $font-regular, $color-black, uppercase);
+        @include font($font-s, $font-regular, $color-black, lowercase);
     }
     &__button {
         display: none;

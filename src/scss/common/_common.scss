@@ -26,13 +26,24 @@ html {
     gap: 18px;
     justify-content: center;
     &__divider {
-        border-bottom: 5px solid $color-blue;
+        border-bottom: 2px solid $color-blue;
         margin-bottom: 8px;
         flex-grow: 1;
         width: 100%;
+        &_mini {
+            flex-basis: 20%;
+            border-bottom: 2px solid $color-blue;
+            margin-bottom: 8px;
+            width: 100%;
+        }
+        &_color{
+            &_white {
+                border-color: $color-white;
+            }
+        }
     }
     &__name {
-        @include font($font-l, $font-bold, $color-black);
+        @include font($font-l, $font-light, $color-black);
         white-space: nowrap;
         flex-grow: 0;
         &_color{
@@ -40,10 +51,6 @@ html {
                 color: $color-white;
             }
         }
-    }
-    &__empty {
-        flex-grow: 1;
-        width: 100%;
     }
 }
 

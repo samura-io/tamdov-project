@@ -3,25 +3,19 @@
     position: relative;
     background-size: cover;
     height: 100%;
+    cursor: pointer;
     &__wrapper {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        bottom: 56px;
+        left: 37px;
         opacity: 0;
-        display: flex;
-        align-items: center;
         flex-direction: column;
         transition: opacity .4s linear;
     }
     &__title {
-        @include font($font-ml, $font-bold, $color-white);
-        margin-bottom: 33px;
+        @include font($font-ml, $font-light, $color-white);
         width: 318px;
-        text-align: center;
-    }
-    &__btn {
-        @include button(123px, 7px);
+        text-align: left;
     }
 
     &::before {

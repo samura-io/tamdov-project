@@ -33,8 +33,9 @@
 }
 
 @mixin link($color:$color-blue) {
-  @include font($font-s, $font-bold, $color);
-  text-decoration: none;
+  @include font($font-s, $font-light, $color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
   transition: opacity .4s linear;
   cursor: pointer;
   &:hover {

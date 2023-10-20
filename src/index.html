@@ -68,15 +68,17 @@
                 <h3 class="title__name">О компании</h3>
                 <div class="title__divider"></div>
               </div>
-              <h4 class="about__text">
+              <p class="about__text">
                 Проектный институт «Тамбовсельхозтехпроект» — один из ведущих
-                проектных институтов в строительном комплексе Тамбовщины. Наша
-                проектная компания использует самые новые тенденции
+                проектных институтов в строительном комплексе Тамбовщины.
+              </p>
+              <p class="about__text">
+                Наша проектная компания использует самые новые тенденции
                 проектирования, опираясь на огромный опыт, лучшие
                 интеллектуальные ресурсы для разработки проектов различных
                 строительных объектов страны, создания эффективной
                 инфраструктуры и комфортной среды.
-              </h4>
+              </p>
               <a class="about__link" href="#">Подробнее</a>
             </div>
           </div>
@@ -85,9 +87,9 @@
       <section class="cards" id="cards">
         <div class="container">
           <div class="title">
-            <div class="title__divider"></div>
+            <div class="title__divider_mini"></div>
             <h3 class="title__name">Наши проекты</h3>
-            <div class="title__empty"></div>
+            <div class="title__divider"></div>
           </div>
           <div class="cards__container">
             <!-- templates elements "card__template"-->
@@ -97,9 +99,9 @@
       <section class="services" id="services">
         <div class="container">
           <div class="title">
-            <div class="title__empty"></div>
-            <h3 class="title__name">Услуги</h3>
             <div class="title__divider"></div>
+            <h3 class="title__name">Услуги</h3>
+            <div class="title__divider_mini"></div>
           </div>
           <div class="services__container">
             <div class="services__card">
@@ -168,9 +170,9 @@
       <section class="partners" id="partners">
         <div class="container">
           <div class="title">
-            <div class="title__divider"></div>
+            <div class="title__divider_mini"></div>
             <h3 class="title__name">Наши партнеры</h3>
-            <div class="title__empty"></div>
+            <div class="title__divider"></div>
           </div>
           <div class="partners__container">
             <div class="swiper-button-next change-swiper-button-next"></div>
@@ -227,11 +229,13 @@
       <section class="contacts" id="contacts">
         <div class="container">
           <div class="title">
+            <div class="title__divider title__divider_color_white"></div>
             <h3 class="title__name title__name_color_white">Контакты</h3>
+            <div class="title__divider_mini title__divider_color_white"></div>
           </div>
           <div class="contacts__container">
             <div class="contacts__address">
-              <p class="contacts__info contacts__info_bold">
+              <p class="contacts__info">
                 ООО “ПИ ТАМБОВСЕЛЬХОЗТЕХПРОЕКТ”
               </p>
               <a
@@ -256,7 +260,7 @@
               </a>
             </div>
             <div class="contacts__timetable">
-              <p class="contacts__info contacts__info_bold">Часы работы</p>
+              <p class="contacts__info">Часы работы</p>
               <p class="contacts__info">Понедельник – пятница 8:30 – 17:30</p>
               <p class="contacts__info">Перерыв 12:00 – 13:00</p>
               <p class="contacts__info">Суббота и воскресенье – Выходные</p>
@@ -264,6 +268,7 @@
           </div>
         </div>
       </section>
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad9b109adcd438ea802c0431166f66fde576298612527158cb43e11e90e43cce6&amp;width=100%25&amp;height=402&amp;lang=ru_RU&amp;scroll=false"></script>
     </main>
     <footer class="footer">
       <div class="container">
@@ -296,14 +301,8 @@
             <!-- templates elements "popup__template"-->
           </div>
         </div>
-        <h3 class="popup__title">Тамбовсельхозтехпроект</h3>
+        <h3 class="popup__title"></h3>
         <p class="popup__subtitle">
-          Проектный институт «Тамбовсельхозтехпроект» — один из ведущих
-          проектных институтов в строительном комплексе Тамбовщины. Наша
-          проектная компания использует самые новые тенденции проектирования,
-          опираясь на огромный опыт, лучшие интеллектуальные ресурсы
-          для разработки проектов различных строительных объектов страны,
-          создания эффективной инфраструктуры и комфортной среды.
         </p>
       </div>
     </div>
@@ -316,7 +315,6 @@
       <article class="card">
         <div class="card__wrapper">
           <div class="card__title"></div>
-          <button class="card__btn">Подробнее</button>
         </div>
       </article>
     </template>

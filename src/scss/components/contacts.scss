@@ -13,13 +13,11 @@
     }
     &__info {
         @include font($font-m, $font-regular, $color-white);
-        &_bold {
-            font-weight: $font-bold;
-        }
     }
     &__link {
         @include link($color-white);
         display: flex;
+        text-decoration: none;
     }
     &__timetable {
         display: flex;

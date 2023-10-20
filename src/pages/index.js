@@ -29,7 +29,7 @@ function addCardElement(item){
         const cardTemplate = new CardTemplate({handleCardClick: ()=>{
             swipers.runPopupSwiper();
             cardPopup.open(item);
-        }}, '#card__template', '.card', item, '.card__btn');
+        }}, '#card__template', '.card', item);
         const templateElement = cardTemplate.generateElements();
         return templateElement;
 }

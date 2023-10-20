@@ -18,7 +18,8 @@
         @include font($font-xxl, $font-black, $color-white, uppercase);
     }
     &__case-description {
-        @include font($font-s, $font-bold, $color-white);
+        @include font($font-s, $font-light, $color-white);
+        white-space: nowrap;
     }
     &__description {
         max-width: 688px;
@@ -96,7 +97,7 @@
             @include font($font-l, $font-bold, $color-white, uppercase);
         }
         &__case-description {
-            @include font($font-xs, $font-regular, $color-white);
+            @include font($font-xs, $font-light, $color-white);
         }
         &__text {
             @include font($font-s, $font-regular, $color-black);
