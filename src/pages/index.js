@@ -14,13 +14,15 @@ fetch(contentLink)
     .then((data) => {
         promoSection.renderItems(data.promoImages.urls);
         cardSection.renderItems(data.cards);
+        partnersSection.renderItems(data.partners.logos)
         swipers.runPaginationSwiper();
+        swipers.runChangeSwiper();
     });
 
 const swipers = new Swipers();
 
-function addImageElement(item){
-        const imageTemplate = new ImageTemplate('#promo__template', '.pagination-swiper-slide', item);
+function addImageElement(item, templateId, placeSelector){
+        const imageTemplate = new ImageTemplate(templateId, placeSelector, item);
         const templateElement = imageTemplate.generateElements();
         return templateElement;
 }
@@ -35,7 +37,7 @@ function addCardElement(item){
 }
 
 const promoSection = new Section({renderer: (item)=>{
-    const element = addImageElement(item);
+    const element = addImageElement(item, '#promo__template', '.pagination-swiper-slide');
     promoSection.addItem(element);
 }}, '.pagination-swiper-wrapper');
 
@@ -43,6 +45,11 @@ const cardSection = new Section({renderer: (item)=>{
     const element = addCardElement(item);
     cardSection.addItem(element);
 }}, '.cards__container');
+
+const partnersSection = new Section({renderer: (item)=>{
+    const element = addImageElement(item, '#partners__template', '.change-swiper-slide');
+    partnersSection.addItem(element);
+}},'.change-swiper-wrapper');
 
 const cardPopup = new Popup('.popup', '#popup__template', '.popup-swiper-slide');
 cardPopup.setEventListeners();

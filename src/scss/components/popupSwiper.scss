@@ -35,3 +35,9 @@
         height: 80px;
     }
 }
+
+@include tablet-heigth {
+    .popup-swiper {
+        height: 80px;
+    }
+}

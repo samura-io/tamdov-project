@@ -179,48 +179,7 @@
             <div class="swiper-button-prev change-swiper-button-prev"></div>
             <div class="swiper change-swiper">
               <div class="swiper-wrapper change-swiper-wrapper">
-                <div class="swiper-slide change-swiper-slide">
-                  <img
-                    class="change-swiper-img"
-                    src="./images/partners/1.jpg"
-                  />
-                </div>
-                <div class="swiper-slide change-swiper-slide">
-                  <img
-                    class="change-swiper-img"
-                    src="./images/partners/2.jpg"
-                  />
-                </div>
-                <div class="swiper-slide change-swiper-slide">
-                  <img
-                    class="change-swiper-img"
-                    src="./images/partners/3.jpg"
-                  />
-                </div>
-                <div class="swiper-slide change-swiper-slide">
-                  <img
-                    class="change-swiper-img"
-                    src="./images/partners/4.jpg"
-                  />
-                </div>
-                <div class="swiper-slide change-swiper-slide">
-                  <img
-                    class="change-swiper-img"
-                    src="./images/partners/1.jpg"
-                  />
-                </div>
-                <div class="swiper-slide change-swiper-slide">
-                  <img
-                    class="change-swiper-img"
-                    src="./images/partners/2.jpg"
-                  />
-                </div>
-                <div class="swiper-slide change-swiper-slide">
-                  <img
-                    class="change-swiper-img"
-                    src="./images/partners/3.jpg"
-                  />
-                </div>
+                <!-- templates elements "partners__template"-->
               </div>
             </div>
           </div>
@@ -296,9 +255,11 @@
           <h3 class="title__name">Проект</h3>
           <div class="title__divider"></div>
         </div>
-        <div class="swiper popup-swiper">
-          <div class="swiper-wrapper popup-swiper-wrapper" style="width: 1px;">
-            <!-- templates elements "popup__template"-->
+        <div class="popup__swiper-container">
+          <div class="swiper popup-swiper">
+            <div class="swiper-wrapper popup-swiper-wrapper" style="width: 1px;">
+              <!-- templates elements "popup__template"-->
+            </div>
           </div>
         </div>
         <h3 class="popup__title"></h3>
@@ -308,7 +269,7 @@
     </div>
     <!-- Promo-tamplate -->
     <template id="promo__template">
-      <img class="swiper-slide pagination-swiper-slide" src="#"/>
+      <img class="swiper-slide pagination-swiper-slide swiper-img" src="#"/>
     </template>
     <!-- Card-tamplate -->
     <template id="card__template">
@@ -322,6 +283,15 @@
     <template id="popup__template">
       <div class="swiper-slide popup-swiper-slide">
         <img class="popup-swiper-img" src="#">
+      </div>
+    </template>
+    <!-- Partners-tamplate -->
+    <template id="partners__template">
+      <div class="swiper-slide change-swiper-slide">
+        <img
+          class="change-swiper-img swiper-img"
+          src="#"
+        />
       </div>
     </template>
   </body>

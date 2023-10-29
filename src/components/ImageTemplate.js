@@ -7,8 +7,11 @@ export default class ImageTemplate extends Template {
 
     generateElements(){
         super.generateElements();
-        this._element.src = this._data;
-
+        if (this._element.children.length === 0) {
+            this._element.src = this._data;
+        } else {
+            this._element.querySelector('.swiper-img').src = this._data;
+        }
         return this._element;
       }
 }

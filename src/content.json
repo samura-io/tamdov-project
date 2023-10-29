@@ -8,6 +8,32 @@
             "./images/promo/5.jpg"
         ] 
     },
+    "partners":{
+        "logos": [
+            "./images/partners/1.jpg",
+            "./images/partners/2.jpg",
+            "./images/partners/3.jpg",
+            "./images/partners/4.jpg",
+            "./images/partners/5.jpg",
+            "./images/partners/6.jpg",
+            "./images/partners/7.jpg",
+            "./images/partners/8.jpg",
+            "./images/partners/9.jpg",
+            "./images/partners/10.jpg",
+            "./images/partners/11.jpg",
+            "./images/partners/12.jpg",
+            "./images/partners/13.jpg",
+            "./images/partners/14.jpg",
+            "./images/partners/15.jpg",
+            "./images/partners/16.jpg",
+            "./images/partners/17.jpg",
+            "./images/partners/18.jpg",
+            "./images/partners/19.jpg",
+            "./images/partners/20.jpg",
+            "./images/partners/21.jpg",
+            "./images/partners/22.jpg"
+        ]
+    },
     "cards": [
         {
             "mainImage": "./images/cards/1.jpg",
