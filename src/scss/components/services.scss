@@ -77,6 +77,9 @@
         &__img {
             width: 150px;
         }
+        &__element {
+            @include font($font-xs, $font-regular, inherit);
+        }
     }
 }
 

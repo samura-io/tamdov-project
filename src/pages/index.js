@@ -7,6 +7,9 @@ import CardTemplate from '../components/CardTemplate';
 import Section from '../components/Section';
 import contentLink from '../content.json';
 
+const aboutButton = document.querySelector('.about__link');
+let content; 
+
 fetch(contentLink)
     .then((response) => {
         return response.json();
@@ -17,6 +20,8 @@ fetch(contentLink)
         partnersSection.renderItems(data.partners.logos)
         swipers.runPaginationSwiper();
         swipers.runChangeSwiper();
+
+        content = data;
     });
 
 const swipers = new Swipers();
@@ -51,8 +56,16 @@ const partnersSection = new Section({renderer: (item)=>{
     partnersSection.addItem(element);
 }},'.change-swiper-wrapper');
 
-const cardPopup = new Popup('.popup', '#popup__template', '.popup-swiper-slide');
+const cardPopup = new Popup('.popup', '#popup__template', '.popup-swiper-slide', 'Проект');
 cardPopup.setEventListeners();
+
+const aboutPopup = new Popup('.popup', '#popup__template', '.popup-swiper-slide', 'О компании');
+aboutPopup.setEventListeners();
 
 const hamburger = new Hamburger('.header');
 hamburger.setEventListeners();
+
+aboutButton.addEventListener('click', ()=>{
+    swipers.runPopupSwiper();
+    aboutPopup.open(content.about);
+})

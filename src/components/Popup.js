@@ -1,10 +1,12 @@
 export default class Popup {
-    constructor(popupSelector, templateSelector, elementSelector) {
+    constructor(popupSelector, templateSelector, elementSelector, popupTitle) {
         this._popupSelector = popupSelector;
         this._templateSelector = templateSelector;
+        this._popupTitle = popupTitle;
         this._elementSelector = elementSelector;
         this._popupElement = document.querySelector(this._popupSelector);
         this._title = this._popupElement.querySelector('.popup__title');
+        this._popupTitleElement = this._popupElement.querySelector('.title__name');
         this._sliderContainer = this._popupElement.querySelector('.popup-swiper-wrapper');
         this._subtitle = this._popupElement.querySelector('.popup__subtitle');
         this._closeButton = this._popupElement.querySelector('.popup__close');
@@ -20,9 +22,9 @@ export default class Popup {
         templateElement.querySelector('.popup-swiper-img').src = item;
         this._sliderContainer.append(templateElement);
         })
-
         this._title.textContent = data.title;
-        this._popupElement.querySelector('.popup__subtitle').textContent = data.subtitle;
+        this._popupTitleElement.textContent = this._popupTitle;
+        this._popupElement.querySelector('.popup__subtitle').innerHTML = data.subtitle;
     }
 
     open(data) {

@@ -146,10 +146,6 @@ html {
   .title__name_color_white {
     color: #FFFFFF;
   }
-  .title__divider {
-    border-bottom: 3px solid #00428F;
-    margin-bottom: 6px;
-  }
 }
 * {
   scrollbar-width: thin;
@@ -670,6 +666,12 @@ html {
   }
   .services__img {
     width: 150px;
+  }
+  .services__element {
+    font-size: 14px;
+    font-weight: 400;
+    color: inherit;
+    text-transform: none;
   }
 }
 @media (max-width: 576px) {
