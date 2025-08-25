@@ -1,9 +1,9 @@
-import Swiper from "swiper";
+import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
-import { Pagination, Autoplay,Navigation } from 'swiper/modules';
+import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 
 export default class Swipers {
 
@@ -28,24 +28,24 @@ export default class Swipers {
   runChangeSwiper() {
     const changeSwiper = new Swiper('.change-swiper', {
       modules: [Navigation],
-        spaceBetween: 50,
-        breakpoints: {
-          576: {
-            slidesPerView: 2,
-          },
-          800: {
-            slidesPerView: 3,
-            spaceBetween: 10
-          },
-          1000: {
-            slidesPerView: 4,
-            spaceBetween: 10
-          }
+      spaceBetween: 50,
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
         },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }
+        800: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1000: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
     return changeSwiper;
   }

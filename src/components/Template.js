@@ -11,10 +11,10 @@ export default class Template {
       .content.querySelector(this._elementSelector)
       .cloneNode(true);
 
-      return templateElement;
+    return templateElement;
   }
 
-  generateElements(){
+  generateElements() {
     this._element = this._getTemplate();
   }
 }

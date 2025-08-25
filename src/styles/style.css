@@ -194,6 +194,10 @@ html {
   font-weight: 400;
   color: #222222;
   text-transform: lowercase;
+  outline: 2px solid red;
+}
+.header__link:hover {
+  border-bottom: 2px solid #00428F;
 }
 .header__button {
   display: none;
@@ -356,7 +360,7 @@ html {
   margin-top: 39px;
 }
 .promo__botton:hover {
-  background-color: silver;
+  background-color: rgb(191.5, 191.5, 191.5);
 }
 .promo__botton:active {
   background-color: #a6a6a6;
