@@ -1,7 +1,10 @@
 .promo {
     height: calc(100vh - 75px);
+    max-height: 600px;
+    min-height: 400px;
     width: 100%;
     position: relative;
+
     &__shadow {
         background: $gradient-black-transparent;
         width: 100%;
@@ -10,18 +13,27 @@
         top: 0;
         left: 0;
         z-index: 1;
+        pointer-events: none;
     }
+
     &__banner {
         position: absolute;
         top: 30%;
         left: (100vw-$content-width)/2;
         z-index: 1;
     }
+
     &__title {
         @include font($font-xl, $font-medium, $color-white);
         max-width: 590px;
+        padding-right: 5px;
+
+        @media (max-width: $mobile) {
+            @include font($font-l, $font-medium, $color-white);
+        }
     }
-    &__botton {
+
+    &__button {
         @include button(265px, 16px);
         margin-top: 39px;
     }
@@ -31,6 +43,12 @@
     .promo {
         &__shadow {
             background: $gradient-black-transparent-media;
+        }
+
+
+        &__button {
+            @include button(170px, 14px);
+            margin-top: 22px;
         }
     }
 }

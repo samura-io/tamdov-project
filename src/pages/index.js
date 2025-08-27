@@ -7,6 +7,8 @@ import ImageTemplate from '../components/ImageTemplate';
 import CardTemplate from '../components/CardTemplate';
 import Section from '../components/Section';
 import contentLink from '../content.json';
+import Promo from '../components/Promo';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const aboutButton = document.querySelector('.about__link');
 const headerLink = document.querySelectorAll('.header__link');
@@ -66,6 +68,9 @@ const partnersSection = new Section({
   },
 }, '.change-swiper-wrapper');
 
+const promo = new Promo();
+promo.setEventListeners();
+
 const cardPopup = new Popup('.popup', '#popup__template', '.popup-swiper-slide', 'Проект');
 cardPopup.setEventListeners();
 
@@ -83,6 +88,7 @@ aboutButton.addEventListener('click', () => {
 headerLink.forEach((i) => {
   i.addEventListener('click', (e) => {
     e.preventDefault();
+    if (i.classList.contains('header__link_type_tel')) return;
     document.querySelector(i.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
   });
 });

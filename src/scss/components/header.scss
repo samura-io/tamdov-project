@@ -65,7 +65,21 @@
                     min-width: 30px;
                     background-image: url(../images/icons/tel.svg);
                     background-size: contain;
+                    background-repeat: no-repeat;
                     font-size: 0;
+
+                    animation: twitch .2s 5 linear 3s;
+
+                    @media (hover: hover) {
+                        &:hover {
+                            border-bottom: 2px solid transparent;
+                            animation: twitch .2s infinite linear;
+                        }
+                    }
+
+                    &:active {
+                        border-bottom: 2px solid transparent;
+                    }
                 }
             }
         }
@@ -152,5 +166,27 @@
 @keyframes run {
     0% {
         right: -80%;
+    }
+}
+
+@keyframes twitch {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
     }
 }

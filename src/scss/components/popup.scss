@@ -1,6 +1,7 @@
 .popup {
     position: fixed;
     display: flex;
+    // align-items: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -12,11 +13,24 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility .5s, opacity .5s linear;
+    overflow-y: auto;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
     &__opened {
         visibility: visible;
         opacity: 1;
     }
+
     &__container {
+        min-height: 500px;
+        max-height: 800px;
+        height: 95%;
         max-width: 800px;
         background-color: #ffffff;
         color: #000000;
@@ -28,19 +42,23 @@
         padding: 60px 0 60px 60px;
         box-shadow: 10px 12px 53px 0px rgba(0, 0, 0, 0.60);
     }
+
     &__title {
         @include font($font-m, $font-medium, $color-black);
         padding-bottom: 33px;
         margin-right: 84px;
     }
+
+
     &__subtitle {
         @include font($font-s, $font-regular, $color-black);
-        max-width: 652px;
-        margin-right: 84px;
         height: 100%;
-        overflow:scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
         padding-right: 10px;
+        padding-block: 2px;
     }
+
     &__close {
         width: 32px;
         height: 32px;
@@ -55,6 +73,7 @@
         right: 32px;
         top: 26px;
         transition: opacity .3s linear;
+
         &:hover {
             opacity: 0.6;
         }
@@ -68,13 +87,16 @@
             padding-bottom: 33px;
             margin-right: 20px;
         }
+
         &__subtitle {
             @include font($font-xs, $font-light, $color-black);
-            margin-right: 20px;    
+            margin-right: 20px;
         }
+
         &__container {
             padding: 40px 0 20px 40px;
         }
+
         &__close {
             width: 23px;
             height: 23px;
@@ -89,9 +111,11 @@
         &__title {
             padding-bottom: 10px;
         }
+
         &__container {
             padding: 20px 0 20px 20px;
         }
+
         &__close {
             width: 15px;
             height: 15px;

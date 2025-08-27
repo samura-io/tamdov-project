@@ -2,6 +2,7 @@
     width: 100%;
     margin: 30px 0;
     height: 150px;
+
     &-slide {
         text-align: center;
         font-size: 18px;
@@ -10,6 +11,7 @@
         justify-content: center;
         align-items: center;
     }
+
     &-img {
         display: block;
         width: 100%;
@@ -20,24 +22,18 @@
 
 @include desktop {
     .popup-swiper {
-        height: 138px;
+        height: 150px !important;
     }
 }
 
 @include tablet {
     .popup-swiper {
-        height: 115px;
+        height: 130px !important;
     }
 }
 
 @include mobile {
     .popup-swiper {
-        height: 80px;
-    }
-}
-
-@include tablet-heigth {
-    .popup-swiper {
-        height: 80px;
+        height: 100px !important;
     }
 }

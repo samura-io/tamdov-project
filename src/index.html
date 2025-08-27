@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title></title>
 </head>
 
@@ -36,7 +36,7 @@
       <div class="container">
         <div class="promo__banner">
           <h2 class="promo__title">Качество и надежность в каждом проекте</h2>
-          <button class="promo__botton">Связаться с нами</button>
+          <button class="promo__button">Связаться с нами</button>
         </div>
       </div>
     </section>
@@ -246,7 +246,7 @@
       </div>
       <div class="popup__swiper-container">
         <div class="swiper popup-swiper">
-          <div class="swiper-wrapper popup-swiper-wrapper" style="width: 1px;">
+          <div class="swiper-wrapper popup-swiper-wrapper gallery" style="width: 1px;">
             <!-- templates elements "popup__template"-->
           </div>
         </div>
@@ -271,7 +271,9 @@
   <!-- Popup-tamplate -->
   <template id="popup__template">
     <div class="swiper-slide popup-swiper-slide">
-      <img class="popup-swiper-img" src="#">
+      <a class="popup-swiper-link" href="#">
+        <img class="popup-swiper-img" src="#">
+      </a>
     </div>
   </template>
   <!-- Partners-tamplate -->
