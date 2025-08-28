@@ -5,6 +5,7 @@
         justify-content: space-between;
         gap: 20px;
     }
+
     &__case {
         background: $gradient-blue;
         padding: 55px 72px;
@@ -14,13 +15,16 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
+
     &__case-number {
         @include font($font-xxl, $font-black, $color-white, uppercase);
     }
+
     &__case-description {
         @include font($font-s, $font-light, $color-white);
         white-space: nowrap;
     }
+
     &__description {
         max-width: 688px;
         min-width: 500px;
@@ -28,29 +32,36 @@
         flex-direction: column;
         flex-grow: 1;
     }
+
     &__title-container {
         display: flex;
         gap: 18px;
         width: 100%;
     }
+
     &__title {
         @include font($font-l, $font-bold, $color-black);
         white-space: nowrap;
     }
+
     &__divider {
         border-bottom: 8px solid $color-blue;
         margin-bottom: 8px;
         width: 100%;
     }
+
     &__text {
         @include font($font-m, $font-regular, $color-black);
         padding: 34px 0 0;
     }
+
     &__link {
+        @include link;
         align-self: flex-end;
         margin-top: auto;
         padding-top: 5px;
-        @include link;
+        font-size: $font-ml;
+        text-underline-offset: 6px;
     }
 }
 
@@ -59,6 +70,7 @@
         &__container {
             flex-wrap: wrap;
         }
+
         &__case {
             order: 1;
             width: 100%;
@@ -67,18 +79,22 @@
             grid-template-rows: none;
             padding: 30px 60px;
         }
+
         &__case-number {
             text-align: center;
         }
+
         &__case-description {
             order: 0;
             display: block;
             text-align: center;
             width: 100%;
         }
+
         &__description {
             max-width: 100%;
         }
+
         &__link {
             padding-top: 15px;
         }
@@ -90,18 +106,23 @@
         &__container {
             padding: 30px 0;
         }
+
         &__case {
             padding: 20px 20px;
         }
+
         &__case-number {
             @include font($font-l, $font-bold, $color-white, uppercase);
         }
+
         &__case-description {
             @include font($font-xs, $font-light, $color-white);
         }
+
         &__text {
             @include font($font-s, $font-regular, $color-black);
         }
+
         &__description {
             min-width: 250px;
         }
@@ -113,6 +134,7 @@
         &__container {
             flex-wrap: wrap;
         }
+
         &__case {
             width: 100%;
             max-width: 100%;
@@ -120,9 +142,11 @@
             grid-template-rows: repeat(2, 1fr);
             padding: 30px 30px;
         }
+
         &__case-number {
             text-align: left;
         }
+
         &__case-description {
             display: block;
             text-align: left;

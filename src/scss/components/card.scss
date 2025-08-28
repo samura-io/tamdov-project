@@ -4,17 +4,20 @@
     background-size: cover;
     height: 100%;
     cursor: pointer;
+
     &__wrapper {
         position: absolute;
-        bottom: 56px;
+        top: 70%;
         left: 37px;
         opacity: 0;
         flex-direction: column;
         transition: opacity .4s linear;
+        padding-right: 10px
     }
+
     &__title {
         @include font($font-ml, $font-light, $color-white);
-        width: 318px;
+        width: 100%;
         text-align: left;
     }
 
@@ -27,10 +30,25 @@
         opacity: 0;
         transition: opacity .4s linear;
     }
-    &:hover::before {
-        opacity: 0.6;
+
+    @media (hover: hover) {
+        &:hover::before {
+            opacity: 0.6;
+        }
+
+        &:hover .card__wrapper {
+            opacity: 1;
+        }
     }
-    &:hover .card__wrapper {
-        opacity: 1;
+
+    @media (hover: none) {
+        &::before {
+            opacity: 0.4;
+        }
+
+        .card__wrapper {
+            opacity: 1;
+        }
     }
+
 }

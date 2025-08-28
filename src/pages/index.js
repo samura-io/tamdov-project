@@ -1,18 +1,19 @@
 /* eslint-disable no-use-before-define */
 import '../scss/main.scss';
-import Swipers from '../components/Swipers';
+import swipers from '../components/Swipers';
 import Hamburger from '../components/Hamburger';
 import Popup from '../components/Popup';
 import ImageTemplate from '../components/ImageTemplate';
 import CardTemplate from '../components/CardTemplate';
 import Section from '../components/Section';
-import contentLink from '../content.json';
+import contentLink from '../content';
 import Promo from '../components/Promo';
 import 'simplelightbox/dist/simple-lightbox.min.css';
+import Services from '../components/Services';
 
 const aboutButton = document.querySelector('.about__link');
 const headerLink = document.querySelectorAll('.header__link');
-let content;
+export let content;
 
 fetch(contentLink)
   .then((response) => {
@@ -27,8 +28,6 @@ fetch(contentLink)
 
     content = data;
   });
-
-const swipers = new Swipers();
 
 function addImageElement(item, templateId, placeSelector) {
   const imageTemplate = new ImageTemplate(templateId, placeSelector, item);
@@ -77,6 +76,9 @@ cardPopup.setEventListeners();
 const aboutPopup = new Popup('.popup', '#popup__template', '.popup-swiper-slide', 'О компании');
 aboutPopup.setEventListeners();
 
+// const services = new Services();
+// services.setEventListeners();
+
 const hamburger = new Hamburger('.header');
 hamburger.setEventListeners();
 
@@ -87,8 +89,8 @@ aboutButton.addEventListener('click', () => {
 
 headerLink.forEach((i) => {
   i.addEventListener('click', (e) => {
-    e.preventDefault();
     if (i.classList.contains('header__link_type_tel')) return;
+    e.preventDefault();
     document.querySelector(i.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
   });
 });
